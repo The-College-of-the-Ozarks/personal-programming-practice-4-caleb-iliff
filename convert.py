@@ -20,8 +20,22 @@ def mph_to_fts(mph):
 mph = input("Input speed in mph: ")
 mph = float(mph)
 
-print("Speed in kph is", mph_to_kph(mph))
+#Menu Mode
+menuInput = input("Please Choose between these three options: \n 1. Kilometers per hour \n 2. Meters a second \n 3. Feet per second \n")
+menuInput = float(menuInput)
 
-print("Speed in m/s is", mph_to_ms(mph))
+#User Check
+if menuInput < 1 or menuInput > 3 :
+    print("Try Again.")
 
-print("Speed in ft/s is", mph_to_fts(mph))
+#Actual Menu Options
+if menuInput == 1 :
+    print("Speed in kph is", mph_to_kph(mph))
+
+if menuInput == 2 :
+    print("Speed in m/s is", mph_to_ms(mph))
+
+if menuInput == 3 :
+    print("Speed in ft/s is", mph_to_fts(mph))
+
+
